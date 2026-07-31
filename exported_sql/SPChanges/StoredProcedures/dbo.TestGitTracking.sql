@@ -1,9 +1,9 @@
 -- Database: SPChanges
 -- Object: dbo.TestGitTracking
--- Event: ALTER_PROCEDURE
+-- Latest Event: ALTER_PROCEDURE
 -- Changed By: DESKTOP-5TOUO1R\Suryaanand
--- Changed At: 2026-07-31 12:51:37.587000
--- Audit ChangeId: 2
+-- Changed At: 2026-07-31 13:02:59.337000
+-- Audit Change IDs: 3
 -- Auto-generated from SQL Server.
 
 CREATE PROCEDURE dbo.TestGitTracking
@@ -12,6 +12,7 @@ BEGIN
     SET NOCOUNT ON;
 
     SELECT
-        'Version 2' AS Message,
-        SYSDATETIME() AS ChangedAt;
+        'Version 3' AS Message,
+        SYSDATETIME() AS ChangedAt,
+        ORIGINAL_LOGIN() AS ModifiedBy;
 END;
